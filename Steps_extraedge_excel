@@ -1,0 +1,27 @@
+# Excel_edubridge_task
+step:1 First enter the values to the excel and save it.
+      
+step:2 Our aim is to duplicate the namefield for names that occur more than once.
+
+step:3 In the cell just go to logic to move the duplicate values that occur more than once.
+  
+step:4
+formula =IFERROR(INDEX(A5:A15, MATCH(0, COUNTIF(B$1:$B4, A5:A15)+IF(COUNTIF(A5:A15, A5:A15)>1, 0, 1), 0)), "")
+
+step:5 After entering the formula the output will be.
+Fruits Name	duplicate
+apple	apple
+apple	orange
+orange	grapes
+grapes	cherry
+pineapple	banana
+cherry	
+kiwi	
+orange	
+grapes	
+orange	
+cherry	
+banana	
+papaya	
+banana	
+guava	
